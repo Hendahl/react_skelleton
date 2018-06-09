@@ -1,3 +1,7 @@
+/**
+ * @author lars.hendahl@gmail.com,
+ */
+
 import React from "react";
 import { push } from "react-router-redux";
 import { bindActionCreators } from "redux";
@@ -8,35 +12,61 @@ import {
   decrement,
   decrementAsync
 } from "../../modules/counter";
+import Typography from "@material-ui/core/Typography";
+import Button from "@material-ui/core/Button";
 
 const Home = props => (
   <div>
-    <h1>Home</h1>
-    <p>Count: {props.count}</p>
-
-    <p>
-      <button onClick={props.increment} disabled={props.isIncrementing}>
-        Increment
-      </button>
-      <button onClick={props.incrementAsync} disabled={props.isIncrementing}>
-        Increment Async
-      </button>
-    </p>
-
-    <p>
-      <button onClick={props.decrement} disabled={props.isDecrementing}>
-        Decrement
-      </button>
-      <button onClick={props.decrementAsync} disabled={props.isDecrementing}>
-        Decrement Async
-      </button>
-    </p>
-
-    <p>
-      <button onClick={() => props.changePage()}>
-        Go to about page via redux
-      </button>
-    </p>
+    <Typography
+      variant="headline"
+      gutterBottom
+      style={{ marginBottom: "4rem" }}
+    >
+      Home
+    </Typography>
+    <Button
+      variant="outlined"
+      onClick={props.increment}
+      disabled={props.isIncrementing}
+    >
+      Increment
+    </Button>
+    <Button
+      variant="outlined"
+      onClick={props.incrementAsync}
+      disabled={props.isIncrementing}
+    >
+      Increment Async
+    </Button>
+    <Button
+      variant="outlined"
+      onClick={props.decrement}
+      disabled={props.isDecrementing}
+    >
+      Decrement
+    </Button>
+    <Button
+      variant="outlined"
+      onClick={props.decrementAsync}
+      disabled={props.isDecrementing}
+    >
+      Decrement Async
+    </Button>
+    <Typography
+      variant="display2"
+      gutterBottom
+      gutterBottom
+      style={{ marginTop: "4rem" }}
+    >
+      Count: {props.count}
+    </Typography>
+    <Button
+      variant="outlined"
+      onClick={() => props.changePage()}
+      style={{ marginTop: "4rem" }}
+    >
+      Go to about page via redux
+    </Button>
   </div>
 );
 
