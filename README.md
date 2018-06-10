@@ -8,6 +8,14 @@ Redux
 Thunk
 Material UI
 Material Icons
+Babel
+Translation (React-Intl)
 
 Thanks to :
 https://github.com/notrab/create-react-app-redux
+
+# Todo:
+
+---
+
+babel-preset-es2015 -> babel-preset-env
