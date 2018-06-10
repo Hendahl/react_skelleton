@@ -2,69 +2,69 @@
  * @author lars.hendahl@gmail.com,
  */
 
-import React from "react";
-import { push } from "react-router-redux";
-import { bindActionCreators } from "redux";
-import { connect } from "react-redux";
+import React from 'react';
+import { push } from 'react-router-redux';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
 import {
   increment,
   incrementAsync,
   decrement,
   decrementAsync
-} from "../../modules/counter";
-import Typography from "@material-ui/core/Typography";
-import Button from "@material-ui/core/Button";
+} from '../../modules/counter';
+import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button';
 
 /* eslint-disable */
 const Home = props => (
   <div>
     <Typography
-      variant="headline"
+      variant='headline'
       gutterBottom
-      style={{ marginBottom: "4rem" }}
+      style={{ marginBottom: '4rem' }}
     >
       Home
     </Typography>
     <Button
-      variant="outlined"
+      variant='outlined'
       onClick={props.increment}
       disabled={props.isIncrementing}
     >
       Increment
     </Button>
     <Button
-      variant="outlined"
+      variant='outlined'
       onClick={props.incrementAsync}
       disabled={props.isIncrementing}
     >
       Increment Async
     </Button>
     <Button
-      variant="outlined"
+      variant='outlined'
       onClick={props.decrement}
       disabled={props.isDecrementing}
     >
       Decrement
     </Button>
     <Button
-      variant="outlined"
+      variant='outlined'
       onClick={props.decrementAsync}
       disabled={props.isDecrementing}
     >
       Decrement Async
     </Button>
     <Typography
-      variant="display2"
+      variant='display2'
       gutterBottom
       gutterBottom
-      style={{ marginTop: "4rem" }}
+      style={{ marginTop: '4rem' }}
     >
       Count: {props.count}
     </Typography>
     <Button
-      variant="outlined"
+      variant='outlined'
       onClick={() => props.changePage()}
-      style={{ marginTop: "4rem" }}
+      style={{ marginTop: '4rem' }}
     >
       Go to about page via redux
     </Button>
@@ -78,13 +78,12 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch =>
-  bindActionCreators(
-    {
+  bindActionCreators({
       increment,
       incrementAsync,
       decrement,
       decrementAsync,
-      changePage: () => push("/about-us")
+      changePage: () => push('/about-us')
     },
     dispatch
   );

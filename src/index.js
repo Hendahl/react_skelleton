@@ -27,7 +27,6 @@ const messages =
   localeData[languageWithoutRegionCode] ||
   localeData[language] ||
   localeData.en;
-
 const target = document.querySelector("#root");
 
 render(
