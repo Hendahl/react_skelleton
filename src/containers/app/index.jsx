@@ -2,18 +2,18 @@
  *  Hendahl IT
  */
 
-import React from 'react';
-import { Route, Link } from 'react-router-dom';
-import Home from '../home';
-import About from '../about';
-import Translation from '../translation';
-import { withStyles } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import PropTypes from 'prop-types';
-import Grid from '@material-ui/core/Grid';
-import Paper from '@material-ui/core/Paper';
+import { Route, Link } from 'react-router-dom'
+import { withStyles } from '@material-ui/core/styles'
+import About from '../about'
+import AppBar from '@material-ui/core/AppBar'
+import Grid from '@material-ui/core/Grid'
+import Home from '../home'
+import Paper from '@material-ui/core/Paper'
+import PropTypes from 'prop-types'
+import React from 'react'
+import Toolbar from '@material-ui/core/Toolbar'
+import Translation from '../translation'
+import Typography from '@material-ui/core/Typography'
 
 const styles = theme => ({
   root: {
@@ -123,7 +123,7 @@ function App(props) {
             </Link>
           </Grid>
         </Grid>
-      </Grid>
+          </Grid>
     </div>
   );
 }
