@@ -2,22 +2,17 @@
  * @author lars.hendahl@gmail.com,
  */
 
-import React from 'react';
-import { push } from 'react-router-redux';
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
-import {
-  increment,
-  incrementAsync,
-  decrement,
-  decrementAsync
-} from '../../modules/counter';
-import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
+import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux'
+import { increment, incrementAsync, decrement, decrementAsync } from '../../modules/counter'
+import { push } from 'react-router-redux'
+import Button from '@material-ui/core/Button'
+import React from 'react'
+import Typography from '@material-ui/core/Typography'
 
 /* eslint-disable */
 const Home = props => (
-  <div>
+  <div >
     <Typography
       variant='headline'
       gutterBottom
@@ -26,9 +21,10 @@ const Home = props => (
       Home
     </Typography>
     <Button
-      variant='outlined'
-      onClick={props.increment}
+      className='eButton'
       disabled={props.isIncrementing}
+      onClick={props.increment}
+      variant='outlined'
     >
       Increment
     </Button>
@@ -54,6 +50,7 @@ const Home = props => (
       Decrement Async
     </Button>
     <Typography
+      className='resultText'
       variant='display2'
       gutterBottom
       gutterBottom
