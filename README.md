@@ -11,6 +11,7 @@ Material Icons
 Babel
 Translation (React-Intl)
 Puppeter test
+Prettier
 
 Thanks to :
 https://github.com/notrab/create-react-app-redux
